@@ -1,4 +1,4 @@
-name: Stage
+name: Stage to AWS ECR
 
 on:
   push:
