@@ -1,4 +1,4 @@
-name: Deploy
+name: Stage
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  stage:
     runs-on: ubuntu-latest
     steps:
 
