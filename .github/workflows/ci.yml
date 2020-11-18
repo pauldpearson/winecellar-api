@@ -23,13 +23,12 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Deploy to EB
-        uses: einaregilsson/beanstalk-deploy@v14
+      - name: Push image to AWS ECR
+        uses: kciter/aws-ecr-action@v1
         with:
-          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: winecellar-api
-          environment_name: winecellar
-          version_label: ${{ github.sha }}
+          access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+          repo: winecellar
           region: us-east-2
-          deployment_package: target/winecellar-api-0.0.1-SNAPSHOT.jar
+          tags: latest-${{ github.run_number }}
