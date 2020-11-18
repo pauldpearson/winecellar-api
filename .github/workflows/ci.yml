@@ -31,4 +31,4 @@ jobs:
           account_id: ${{ secrets.AWS_ACCOUNT_ID }}
           repo: winecellar
           region: us-east-2
-          tags: ${{ steps.date.outputs.date }}.${{ github.run_number }}
+          tags: v1.0.0-${{ github.run_number }}
