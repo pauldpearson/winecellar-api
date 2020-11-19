@@ -30,10 +30,6 @@ on:
   workflow_run:
     workflows:
       - "Stage"
-    branches:
-      - master
-    types:
-      - completed
 
 jobs:
   deploy:
