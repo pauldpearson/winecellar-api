@@ -1,5 +1,5 @@
 {
-  "family": "",
+  "family": "winecellar",
   "taskRoleArn": "",
   "executionRoleArn": "",
   "networkMode": "none",
@@ -38,7 +38,7 @@
       ],
       "environmentFiles": [
         {
-          "value": "",
+          "value": "jar",
           "type": "s3"
         }
       ],
@@ -66,8 +66,8 @@
         },
         "devices": [
           {
-            "hostPath": "",
-            "containerPath": "",
+            "hostPath": "/",
+            "containerPath": "/",
             "permissions": [
               "read"
             ]
@@ -77,7 +77,7 @@
         "sharedMemorySize": 0,
         "tmpfs": [
           {
-            "containerPath": "",
+            "containerPath": "/",
             "size": 0,
             "mountOptions": [
               ""
@@ -95,7 +95,7 @@
       ],
       "dependsOn": [
         {
-          "containerName": "",
+          "containerName": "winecellar-api",
           "condition": "START"
         }
       ],
@@ -148,7 +148,7 @@
       },
       "healthCheck": {
         "command": [
-          ""
+          "ping"
         ],
         "interval": 0,
         "timeout": 0,
@@ -225,7 +225,7 @@
   "ipcMode": "none",
   "proxyConfiguration": {
     "type": "APPMESH",
-    "containerName": "",
+    "containerName": "winecellar-api",
     "properties": [
       {
         "name": "",
