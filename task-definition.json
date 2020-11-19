@@ -1,6 +1,6 @@
 {
   "family": "winecellar",
-  "taskRoleArn": "",
+  "taskRoleArn": "ecs:RegisterTaskDefinition",
   "executionRoleArn": "",
   "networkMode": "none",
   "containerDefinitions": [
