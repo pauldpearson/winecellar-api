@@ -1,4 +1,4 @@
-name: Build
+name: Build with Maven & Docker
 
 on:
   pull_request:
@@ -22,4 +22,4 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Build Docker image
-        run: echo "nothing going here yet"
+        run: docker build . --file Dockerfile
