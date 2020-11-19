@@ -194,12 +194,6 @@
       }
     }
   ],
-  "placementConstraints": [
-    {
-      "type": "memberOf",
-      "expression": ""
-    }
-  ],
   "requiresCompatibilities": [
     "EC2"
   ],
@@ -222,11 +216,5 @@
         "value": ""
       }
     ]
-  },
-  "inferenceAccelerators": [
-    {
-      "deviceName": "",
-      "deviceType": ""
-    }
-  ]
+  }
 }
