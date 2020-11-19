@@ -28,12 +28,9 @@ name: Deploy to Amazon ECS
 
 on:
   workflow_run:
-    workflows:
-      - "Stage to AWS ECR"
-    branches:
-      - master
-    types:
-      - completed
+    workflows: [ "Stage to AWS ECR" ]
+    branches: [ master ]
+    types: [ completed ]
 
 jobs:
   deploy:
