@@ -163,7 +163,7 @@
       ],
       "resourceRequirements": [
         {
-          "value": "",
+          "value": "none",
           "type": "GPU"
         }
       ],
@@ -190,16 +190,6 @@
         },
         "labels": {
           "KeyName": ""
-        }
-      },
-      "efsVolumeConfiguration": {
-        "fileSystemId": "",
-        "rootDirectory": "",
-        "transitEncryption": "ENABLED",
-        "transitEncryptionPort": 0,
-        "authorizationConfig": {
-          "accessPointId": "",
-          "iam": "DISABLED"
         }
       }
     }
